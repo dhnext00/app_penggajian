@@ -2,7 +2,7 @@
             <footer class="sticky-footer bg-white fixed-bottom">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PT. VARTA Microbattery Indonesia | 2022</span>
+                        <span>Copyright &copy; PT. VARTA Microbattery Indonesia | <?php echo date("Y"); ?></span>
                     </div>
                 </div>
             </footer>
