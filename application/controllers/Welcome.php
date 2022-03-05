@@ -27,16 +27,17 @@ class Welcome extends CI_Controller {
                 </div>');
                 redirect('welcome');	
 			}else{
-				$this->session->set_userdata('hak_akses',$cek->hak_akses);
-				$this->session->set_userdata('nama_siswa',$cek->nama_siswa);
-				$this->session->set_userdata('photo',$cek->photo);
-				$this->session->set_userdata('id_siswa',$cek->id_siswa);
-				$this->session->set_userdata('nik',$cek->nik);
-				switch ($cek->hak_akses) {
-					case 1 : 	redirect('admin/dashboard');
+				$this->session->set_userdata('id_user', $cek->id_user);
+				$this->session->set_userdata('username', $cek->username);
+				$this->session->set_userdata('role',$cek->role);
+				switch ($cek->role) {
+					case 0 : 	redirect('admin/dashboard');
 								break;
-					case 2 : 	redirect('siswa/dashboard');
+					case 1 : 	redirect('siswa/dashboard');
 								break;
+					case 2 :	redirect('pegawai/dashboard');
+								break;
+					case 3 :	redirect('../notif');
 					default:	break;
 				}
 			}

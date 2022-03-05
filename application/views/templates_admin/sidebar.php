@@ -58,6 +58,13 @@
                     <i class="fas fa-fw fa-lock"></i>
                     <span>Ganti Password</span></a>
             </li>
+            <?php if($this->session->userdata('role') == 0){ ?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('users') ?>">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Pengguna</span></a>
+            </li>
+            <?php } ?>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -106,9 +113,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('nama_pegawai')  ?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="<?php echo base_url('assets/photo/').$this->session->userdata('photo')?>">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('username');?></span>
                             </a>
                            </li>
                        </ul>

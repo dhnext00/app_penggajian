@@ -22,8 +22,8 @@ class GantiPassword extends CI_Controller{
 
 		if($this->form_validation->run() !== FALSE) {
 			$data = array('password' => md5($passBaru));
-			$id = array('id_siswa' => $this->session->userdata('id_siswa'));
-			$this->penggajianModel->update_data('data_siswa',$data,$id);
+			$id = array('id_user' => $this->session->userdata('id_user'));
+			$this->penggajianModel->update_data('users',$data,$id);
 			$this->session->set_flashdata('pesan','<div class="alert alert-success dismissible fade show" role="alert">
   			<strong>Password berhasil diganti!</strong>
   			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

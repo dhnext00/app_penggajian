@@ -36,7 +36,7 @@ class PenggajianModel extends CI_model{
 		$result			= $this->db->where('username',$username)
 								   ->where('password',md5($password))
 								   ->limit(1)
-								   ->get('data_pegawai');
+								   ->get('users');
 		if($result->num_rows()>0){
 			return $result->row();
 		}else{

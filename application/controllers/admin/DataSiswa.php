@@ -5,7 +5,7 @@ class dataSiswa extends CI_Controller{
 	 public function __construct(){
         parent:: __construct();
 
-        if($this->session->userdata('hak_akses') !='1') {
+        if($this->session->userdata('role') !='0') {
             $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>Anda belum login!</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
@@ -49,7 +49,6 @@ class dataSiswa extends CI_Controller{
 			$tanggal_masuk 			=$this->input->post('tanggal_masuk');
 			$sekolah 				=$this->input->post('sekolah');
 			$kelas 					=$this->input->post('kelas');
-			$hak_akses 				=$this->input->post('hak_akses');
 			$username 				=$this->input->post('username');
 			$password 				=md5($this->input->post('password'));
 			$photo 					=$_FILES['photo']['name'];
@@ -71,7 +70,6 @@ class dataSiswa extends CI_Controller{
 				'sekolah'			=> $sekolah,
 				'tanggal_masuk'		=> $tanggal_masuk,
 				'kelas'				=> $kelas,
-				'hak_akses'			=> $hak_akses,
 				'username'			=> $username,
 				'password'			=> $password,
 				'photo'				=> $photo,
@@ -115,7 +113,6 @@ class dataSiswa extends CI_Controller{
 			$tanggal_masuk 			=$this->input->post('tanggal_masuk');
 			$sekolah 				=$this->input->post('sekolah');
 			$kelas 					=$this->input->post('kelas');
-			$hak_akses 				=$this->input->post('hak_akses');
 			$username 				=$this->input->post('username');
 			$password 				=md5($this->input->post('password'));
 			$photo 					=$_FILES['photo']['name'];
@@ -138,7 +135,6 @@ class dataSiswa extends CI_Controller{
 				'sekolah'			=> $sekolah,
 				'tanggal_masuk'		=> $tanggal_masuk,
 				'kelas'				=> $kelas,
-				'hak_akses'			=> $hak_akses,
 				'username'			=> $username,
 				'password'			=> $password,
 			);
