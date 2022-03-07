@@ -40,6 +40,11 @@
                            <td>:</td>
                            <td><?php echo $s->kelas ?></td>
                        </tr>
+                       <tr>
+                           <td>Jurusan</td>
+                           <td>:</td>
+                           <td><?php echo $s->jurusan ?></td>
+                       </tr>
                    </table> 
                 </div>
             </div>

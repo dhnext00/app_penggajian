@@ -40,6 +40,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Jurusan</label>
+                    <input type="text" name="kelas" class="form-control">
+                    <?php echo form_error('kelas','<div class="text-small text-danger"></div>') ?>
+                </div>
+
+                <div class="form-group">
                     <label>Jenis Kelamin</label>
                     <select name="jenis_kelamin" class="form-control">
                         <option>--Pilih Jenis Kelamin--</option>

@@ -49,6 +49,7 @@ class dataSiswa extends CI_Controller{
 			$tanggal_masuk 			=$this->input->post('tanggal_masuk');
 			$sekolah 				=$this->input->post('sekolah');
 			$kelas 					=$this->input->post('kelas');
+			$jurusan 				=$this->input->post('jurusan');
 			$hak_akses 				=$this->input->post('hak_akses');
 			$username 				=$this->input->post('username');
 			$password 				=md5($this->input->post('password'));
@@ -71,6 +72,7 @@ class dataSiswa extends CI_Controller{
 				'sekolah'			=> $sekolah,
 				'tanggal_masuk'		=> $tanggal_masuk,
 				'kelas'				=> $kelas,
+				'jurusan'			=> $jurusan,
 				'hak_akses'			=> $hak_akses,
 				'username'			=> $username,
 				'password'			=> $password,
@@ -115,6 +117,7 @@ class dataSiswa extends CI_Controller{
 			$tanggal_masuk 			=$this->input->post('tanggal_masuk');
 			$sekolah 				=$this->input->post('sekolah');
 			$kelas 					=$this->input->post('kelas');
+			$jurusan 				=$this->input->post('jurusan');
 			$hak_akses 				=$this->input->post('hak_akses');
 			$username 				=$this->input->post('username');
 			$password 				=md5($this->input->post('password'));
@@ -138,6 +141,7 @@ class dataSiswa extends CI_Controller{
 				'sekolah'			=> $sekolah,
 				'tanggal_masuk'		=> $tanggal_masuk,
 				'kelas'				=> $kelas,
+				'jurusan'			=> $jurusan,
 				'hak_akses'			=> $hak_akses,
 				'username'			=> $username,
 				'password'			=> $password,
@@ -166,6 +170,7 @@ class dataSiswa extends CI_Controller{
 		$this->form_validation->set_rules('tanggal_masuk','Tanggal Masuk','required');
 		$this->form_validation->set_rules('sekolah','Sekolah','required');
 		$this->form_validation->set_rules('kelas','Kelas','required');
+		$this->form_validation->set_rules('jurusan','Jurusan','required');
 	}
 
 

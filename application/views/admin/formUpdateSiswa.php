@@ -52,6 +52,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Jurusan</label>
+                    <input type="text" name="jurusan" class="form-control" value="<?php echo $s->jurusan ?>">
+                    <?php echo form_error('jurusan','<div class="text-small text-danger"></div>') ?>
+                </div>
+
+                <div class="form-group">
                     <label>Sekolah</label>
                     <select name="sekolah" class="form-control">
                         <option value="<?php echo $s->sekolah ?>"><?php echo $s->sekolah ?></option>

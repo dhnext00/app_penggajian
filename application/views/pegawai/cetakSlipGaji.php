@@ -14,7 +14,7 @@
 <body>
 
 	<center>
-		<h1>PT. Varta Microbattery Indonesia</h1>
+		<h1>PT. VARTA Microbattery Indonesia</h1>
 		<h2>Slip Gaji Pegawai</h2>
 		<hr style="width: 50%; border-width: 5px; color: black;">
 	</center>

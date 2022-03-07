@@ -14,6 +14,7 @@
         <th class="text-center">NIS</th>
         <th class="text-center">Nama Siswa</th>
         <th class="text-center">Kelas</th>
+        <th class="text-center">Jurusan</th>
         <th class="text-center">Jenis Kelamin</th>
         <th class="text-center">Sekolah</th>
         <th class="text-center">Tanggal Masuk</th>
@@ -28,6 +29,7 @@
         <td><?php echo $s->nis ?></td>
         <td><?php echo $s->nama_siswa ?></td>
         <td><?php echo $s->kelas ?></td>
+        <td><?php echo $s->jurusan ?></td>
         <td><?php echo $s->jenis_kelamin ?></td>
         <td><?php echo $s->sekolah ?></td>
         <td><?php echo $s->tanggal_masuk ?></td>
