@@ -17,7 +17,7 @@
             <th>Cetak Absensi</th>
         </tr>
 
-        <?php $no=1; foreach($absensi as $a) : ?>
+        <?php foreach($absensi as $a) : ?>
         <tr>
             <td><?php echo $a->bulan ?></td>    
             <td><?php echo $a->nama_siswa ?></td>
@@ -26,10 +26,10 @@
             <td><?php echo $a->hadir ?></td>
             <td><?php echo $a->sakit ?></td>
             <td><?php echo $a->alpha ?></td>
-        </tr>
-
+        
+            <td>
                 <center>
-                    <a class="btn btn-sm btn-primary" href="<?php echo base_url('siswa/dataAbsensi/cetakAbsensi/'.$a->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
+                    <a class="btn btn-sm btn-primary" href="<?php echo base_url('siswa/dataAbsensiSiswa/cetakAbsensi/'.$a->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
                 </center>
             </td>
         </tr>

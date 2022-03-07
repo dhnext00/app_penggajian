@@ -23,7 +23,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('siswa/dataAbsensi') ?>">
+                <a class="nav-link" href="<?php echo base_url('siswa/dataAbsensiSiswa') ?>">
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Data Absensi</span></a>
             </li>
