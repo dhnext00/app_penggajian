@@ -29,12 +29,13 @@ class DataAbsensiSiswa extends CI_Controller{
         $tahun = date('Y');
         $bulantahun = $bulan.$tahun;
     }
-        $data['kehadiran'] = $this->db->query("SELECT data_siswa.nama_siswa,data_siswa.nis,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.alpha,data_kehadiran.bulan,data_kehadiran.id_kehadiran
+
+        $data['absensi'] = $this->db->query("SELECT data_kehadiran.*, data_siswa.nama_siswa,data_siswa.nis,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.bulan,data_kehadiran.id_kehadiran
             FROM data_siswa
             INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis
             INNER JOIN data_sekolah ON data_sekolah.nama_sekolah=data_siswa.sekolah
-            WHERE data_kehadiran.nis='$nis'
-            ORDER BY data_kehadiran.bulan DESC")->result();
+            WHERE data_kehadiran.bulan='$bulantahun'
+            ORDER BY data_kehadiran.bulan ASC")->result();
        
         $this->load->view('templates_siswa/header',$data);
         $this->load->view('templates_siswa/sidebar');
@@ -45,10 +46,10 @@ class DataAbsensiSiswa extends CI_Controller{
     public function cetakAbsensi($id)
     {
         $data['title'] = "Cetak Absensi Siswa";
-        $data['print_slip'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.alpha,data_kehadiran.bulan
-            FROM data_siswa
-            INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis
-            INNER JOIN data_sekolah ON data_sekolah.nama_sekolah=data_siswa.sekolah
+        $data['print_slip'] = $this->db->query("SELECT data_kehadiran.*,data_siswa.nama_siswa,data_siswa.jenis_kelamin,data_siswa.sekolah
+            FROM data_kehadiran
+            INNER JOIN data_siswa ON data_kehadiran.nis=data_siswa.nis
+            INNER JOIN data_sekolah ON data_siswa.sekolah=data_sekolah.nama_sekolah
             WHERE data_kehadiran.id_kehadiran='$id'")->result();
         $this->load->view('templates_siswa/header',$data);
         $this->load->view('siswa/cetakAbsensi',$data);
