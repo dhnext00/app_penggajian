@@ -15,7 +15,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-5">
-                    <img style="width: 250px;" src="<?php echo base_url('assets/photo/'.$s->photo) ?>">
+                    <img style="width: 270px;" src="<?php echo base_url('assets/photo/'.$s->photo) ?>">
                 </div>
                
                 <div class="col-md-7">
@@ -24,6 +24,11 @@
                            <td>Nama Siswa</td>
                            <td>:</td>
                            <td><?php echo $s->nama_siswa ?></td>
+                       </tr>
+                        <tr>
+                           <td>NIS</td>
+                           <td>:</td>
+                           <td><?php echo $s->nis ?></td>
                        </tr>
                        <tr>
                            <td>Sekolah </td>

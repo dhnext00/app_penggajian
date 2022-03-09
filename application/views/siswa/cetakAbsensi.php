@@ -20,11 +20,11 @@
 	</center>
 
 	
-	<?php foreach($absensi as $a){
-	} ?>
-
+	<?php foreach($absensi as $a);?>
 
 	<?php foreach($print_slip as $ps) : ?>
+
+	<?php $absensi=$ps->hadir * $kehadiran; ?>
 
 	<table style="width: 100%">
 		<tr>
@@ -68,19 +68,19 @@
 		<tr>
 			<td>1</td>
 			<td>Hadir</td>
-			<td><?php echo $a->hadir ?></td>
+			<td><?php echo number_format($ps->hadir,0,',','.') ?></td>
 		</tr>
 
 		<tr>
 			<td>2</td>
 			<td>Sakit</td>
-			<td><?php echo $a->sakit ?></td>
+			<td><?php echo number_format($ps->sakit,0,',','.') ?></td>
 		</tr>
 
 		<tr>
 			<td>3</td>
 			<td>Alpha</td>
-			<td><?php echo $a->alpha ?></td>
+			<td><?php echo number_format($ps->alpha,0,',','.') ?></td>
 		</tr>
 
 	</table>

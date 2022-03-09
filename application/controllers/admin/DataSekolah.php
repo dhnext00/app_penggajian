@@ -68,7 +68,7 @@ class DataSekolah extends CI_Controller{
 	{
 	$where = array('id_sekolah' => $id);
 	$data['sekolah'] = $this->db->query("SELECT * FROM data_sekolah WHERE id_sekolah='$id'")->result();
-	$data['title'] = "Tambah Data Sekolah";
+	$data['title'] = "Update Data Sekolah";
 	$this->load->view('templates_admin/header',$data);
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/updateDataSekolah',$data);
