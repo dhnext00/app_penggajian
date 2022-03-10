@@ -19,12 +19,7 @@
 		<hr style="width: 50%; border-width: 5px; color: black;">
 	</center>
 
-	
-	<?php foreach($absensi as $a);?>
-
 	<?php foreach($print_slip as $ps) : ?>
-
-	<?php $absensi=$ps->hadir * $kehadiran; ?>
 
 	<table style="width: 100%">
 		<tr>
@@ -40,7 +35,7 @@
 		</tr>
 
 		<tr>
-			<td>Jabatan</td>
+			<td>Sekolah</td>
 			<td>:</td>
 			<td><?php echo $ps->nama_sekolah ?></td>
 		</tr>
@@ -63,7 +58,7 @@
 		<tr>
 			<th class="text-center" width="5%">No</th>
 			<th class="text-center">Keterangan</th>
-			<th class="text-center">Jumlah</th>
+			<th class="text-center">Jumlah Absensi</th>
 		</tr>
 		<tr>
 			<td>1</td>
@@ -96,7 +91,7 @@
 			</td>
 
 			<td width="200px">
-				<p>Batam, <?php echo date("d M Y") ?> <br> Finance,</p>
+				<p>Batam, <?php echo date("d M Y") ?> <br> Attendance,</p>
 				<br>
 				<br>
 				<p>__________________</p>

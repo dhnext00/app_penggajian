@@ -30,6 +30,7 @@ class DataAbsensiSiswa extends CI_Controller{
         $bulantahun = $bulan.$tahun;
     }
 
+       
         $data['absensi'] = $this->db->query("SELECT data_kehadiran.*, data_siswa.nama_siswa,data_siswa.nis,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.bulan,data_kehadiran.id_kehadiran
             FROM data_siswa
             INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis

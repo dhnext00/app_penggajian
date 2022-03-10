@@ -66,10 +66,22 @@
 			<td><?php echo $l->sakit ?></td>
 			<td><?php echo $l->alpha ?></td>
 		</tr>
+
 		<?php endforeach; ?>
 	</table>
 
-
+	<table width="100%">
+        <tr>
+          <td></td>
+          <td width="200px">
+            <p>Batam, <?php echo date("d M Y") ?> <br> Attendance,</p>
+            <br>
+            <br>
+            <p>__________________</p>
+          </td>
+        </tr>
+      </table>
+      
 </body>
 </html>
 
