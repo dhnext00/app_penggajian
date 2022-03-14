@@ -36,7 +36,7 @@ class DataAbsensiSiswa extends CI_Controller{
     public function cetakAbsensi($id)
     {
         $data['title'] = "Cetak Absensi Siswa";
-        $data['absensi'] = $this->penggajianModel->get_data('data_kehadiran')->result();
+        $data['lap_kehadiran'] = $this->penggajianModel->get_data('data_kehadiran')->result();
         
         $data['print_slip'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.sakit,data_kehadiran.alpha,data_kehadiran.bulan
             FROM data_siswa
