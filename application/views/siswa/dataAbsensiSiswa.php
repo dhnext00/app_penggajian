@@ -17,19 +17,32 @@
             <th class="text-center">Cetak Absensi</th>
         </tr>
 
-        <?php foreach($absensi as $a) : ?>
+        <?php 
+        if((isset($_POST['bulan']) && $_POST['bulan']!='') && (isset($_POST['tahun']) && $_POST['tahun']!='')){
+                $bulan = $_POST['bulan'];
+                $tahun = $_POST['tahun'];
+                $bulantahun = $bulan.$tahun;
+            }else{
+                $bulan = date('m');
+                $tahun = date('Y');
+                $bulantahun = $bulan.$tahun;
+            }
+
+    ?>
+
+        <?php foreach($lap_kehadiran as $l) : ?>
         <tr>
-            <td><?php echo $a->bulan ?></td>    
-            <td><?php echo $a->nama_siswa ?></td>
-            <td><?php echo $a->nis ?></td>
-            <td><?php echo $a->nama_sekolah ?></td>
-            <td><?php echo $a->hadir ?></td>
-            <td><?php echo $a->sakit ?></td>
-            <td><?php echo $a->alpha ?></td>
+            <td><?php echo $l->bulan ?></td>    
+            <td><?php echo $l->nama_siswa ?></td>
+            <td><?php echo $l->nis ?></td>
+            <td><?php echo $l->nama_sekolah ?></td>
+            <td><?php echo $l->hadir ?></td>
+            <td><?php echo $l->sakit ?></td>
+            <td><?php echo $l->alpha ?></td>
         
             <td>
                 <center>
-                    <a class="btn btn-sm btn-primary" href="<?php echo base_url('siswa/dataAbsensiSiswa/cetakAbsensi/'.$a->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
+                    <a class="btn btn-sm btn-primary" href="<?php echo base_url('siswa/dataAbsensiSiswa/cetakAbsensi/'.$l->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
                 </center>
             </td>
         </tr>
