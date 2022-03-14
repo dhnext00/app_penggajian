@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
 				$this->session->set_userdata('nama_siswa',$cek->nama_siswa);
 				$this->session->set_userdata('photo',$cek->photo);
 				$this->session->set_userdata('id_siswa',$cek->id_siswa);
-				$this->session->set_userdata('nik',$cek->nik);
+				$this->session->set_userdata('nis',$cek->nis);
 				switch ($cek->hak_akses) {
 					case 1 : 	redirect('admin/dashboard');
 								break;

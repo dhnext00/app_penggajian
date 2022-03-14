@@ -30,7 +30,7 @@
 
     ?>
 
-        <?php foreach($lap_kehadiran as $l) : ?>
+        <?php foreach($kehadiran as $l) : ?>
         <tr>
             <td><?php echo $l->bulan ?></td>    
             <td><?php echo $l->nama_siswa ?></td>
