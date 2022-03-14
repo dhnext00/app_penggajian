@@ -32,7 +32,7 @@
 
     ?>
 
-	<?php foreach($lap_kehadiran as $l) : ?>
+	<?php foreach($print_slip as $l) : ?>
 
 	<table style="width: 100%">
 		<tr>
