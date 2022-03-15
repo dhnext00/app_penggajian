@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!-- left column -->
+	<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo $title ?></title>
 	<style type="text/css">

@@ -41,6 +41,15 @@
             </select>
           </div>
           
+        <div class="form-group mb-2 ml-5">
+            <label for="staticEmail2">Siswa: </label>
+            <select class="form-control ml-3" name="tahun">
+                <option value="">--Pilih Siswa--</option>
+                <?php foreach($siswa as $s) : ?>
+                    <option value="<?php echo $s->nama_siswa ?>"><?php echo $s->nama_siswa ?></option>
+                <?php endforeach; ?>
+                </select>
+            </div>        
 
           <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Generate </button>
         </form>

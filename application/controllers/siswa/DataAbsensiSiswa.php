@@ -26,7 +26,7 @@ class DataAbsensiSiswa extends CI_Controller{
             INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis
             INNER JOIN data_sekolah ON data_sekolah.nama_sekolah=data_siswa.sekolah
             WHERE data_kehadiran.nis='$nis'
-            ORDER BY data_kehadiran.bulan DESC")->result();
+            ORDER BY data_kehadiran.bulan ASC")->result();
         $this->load->view('templates_siswa/header',$data);
         $this->load->view('templates_siswa/sidebar');
         $this->load->view('siswa/dataAbsensiSiswa',$data);
@@ -38,7 +38,7 @@ class DataAbsensiSiswa extends CI_Controller{
         $data['title'] = "Cetak Absensi Siswa";
         $data['lap_kehadiran'] = $this->penggajianModel->get_data('data_kehadiran')->result();
         
-        $data['kehadiran'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.sakit,data_kehadiran.alpha,data_kehadiran.bulan
+        $data['print_slip'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.sakit,data_kehadiran.alpha,data_kehadiran.bulan
             FROM data_siswa
             INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis
             INNER JOIN data_sekolah ON data_sekolah.nama_sekolah=data_siswa.sekolah

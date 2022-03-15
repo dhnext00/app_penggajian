@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- left column -->
+	 <!-- left column -->
 	<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px">
 	<title><?php echo $title ?></title>
 	<style type="text/css">
@@ -17,23 +17,10 @@
 
 	<center>
 		<h1>PT. VARTA Microbattery Indonesia</h1>
-		<h2>Data Absensi Siswa PKL</h2>
+		<h2>Slip Absensi Siswa</h2>
 		<hr style="width: 50%; border-width: 5px; color: black;">
 	</center>
-
-	<?php 
-		if((isset($_POST['bulan']) && $_POST['bulan']!='') && (isset($_POST['tahun']) && $_POST['tahun']!='')){
-	            $bulan = $_POST['bulan'];
-	            $tahun = $_POST['tahun'];
-	            $bulantahun = $bulan.$tahun;
-	        }else{
-	            $bulan = date('m');
-	            $tahun = date('Y');
-	            $bulantahun = $bulan.$tahun;
-	        }
-
-    ?>
-
+	
 	<?php foreach($print_slip as $l) : ?>
 
 	<table style="width: 100%">

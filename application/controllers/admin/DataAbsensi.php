@@ -34,7 +34,7 @@ class DataAbsensi extends CI_Controller{
 		FROM data_kehadiran
 		INNER JOIN data_siswa ON data_kehadiran.nis=data_siswa.nis
 		INNER JOIN data_sekolah ON data_siswa.sekolah = data_sekolah.nama_sekolah
-		WHERE data_kehadiran.bulan='$bulantahun'
+		WHERE data_kehadiran.bulan='$bulantahun' 
 		ORDER BY data_siswa.nama_siswa ASC")->result();
 	
 	$this->load->view('templates_admin/header',$data);
