@@ -42,7 +42,7 @@
         
             <td>
                 <center>
-                    <a class="btn btn-sm btn-primary" href="<?php echo base_url('siswa/dataAbsensiSiswa/cetakAbsensi/'.$l->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
+                    <a class="btn btn-sm btn-primary" target="_blank" href="<?php echo base_url('siswa/dataAbsensiSiswa/cetakAbsensi/'.$l->id_kehadiran) ?>"><i class="fas fa-print"></i></a>
                 </center>
             </td>
         </tr>
