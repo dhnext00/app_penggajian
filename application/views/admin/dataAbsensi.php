@@ -65,24 +65,15 @@
       Menampilkan Data Kehadiran Siswa Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun:<span class="font-weight-bold"><?php echo $tahun ?></span>
   </div>
                  <div id="secondary" class="widget-area" role="complementary">
-        <aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="../admin/dataAbsensi">
+        <aside id="search-2" class="widget widget_search">
+          <form role="search" method="get" class="search-form" action="<?php echo base_url('admin/dataAbsensi/searchResult')?>">
                 <label>
                     <span class="screen-reader-text">Search untuk:</span>
-                    <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="nama_siswa" />
+                    <input type="search" class="search-field form-control rounded" placeholder="Search &hellip;" value="" name="nama_siswa" />
                 </label>
                 <input type="submit" class="search-submit" value="Search" />
-            </form></aside>
-
-            <div class="input-group mb-3">
-            <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
-            <input
-                type="search"
-                class="form-control rounded"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="search-addon"
-            />
-            </div>
+          </form>
+        </aside>
 
   <?php 
 
