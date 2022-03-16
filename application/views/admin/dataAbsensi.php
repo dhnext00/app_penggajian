@@ -10,7 +10,7 @@
       </div>
       <div class="card-body">
         
-        <form class="form-inline">
+        <form class="form-inline" action="<?php echo base_url('admin/dataAbsensi')?>">
           <div class="form-group mb-2">
             <label for="staticEmail2">Bulan: </label>
             <select class="form-control ml-3" name="bulan">
@@ -48,26 +48,15 @@
       </div>
   </div>
 
-    <?php 
-        if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
-            $bulan = $_GET['bulan'];
-            $tahun = $_GET['tahun'];
-            $bulantahun = $bulan.$tahun;
-        }else{
-            $bulan = date('m');
-            $tahun = date('Y');
-            $bulantahun = $bulan.$tahun;
-        }
-
-    ?>
-
   <div class="alert alert-info">
       Menampilkan Data Kehadiran Siswa Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun:<span class="font-weight-bold"><?php echo $tahun ?></span>
   </div>
                  <div id="secondary" class="widget-area" role="complementary">
         <aside id="search-2" class="widget widget_search">
-          <form role="search" method="get" class="search-form" action="<?php echo base_url('admin/dataAbsensi/searchResult')?>">
+          <form role="search" method="get" class="search-form" action="<?php echo base_url('admin/dataAbsensi/searchResult?bulan=$bulan&tahun=$tahun&')?>">
                 <label>
+                    <input type="text" name="bulan" value="<?= $bulan ?>" hidden>
+                    <input type="text" name="tahun" value="<?= $tahun ?>" hidden>
                     <span class="screen-reader-text">Search untuk:</span>
                     <input type="search" class="search-field form-control rounded" placeholder="Search &hellip;" value="" name="nama_siswa" />
                 </label>
