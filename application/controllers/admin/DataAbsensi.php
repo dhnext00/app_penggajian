@@ -20,7 +20,7 @@ class DataAbsensi extends CI_Controller{
 	{
 	$data['title'] = "Data Absensi Siswa";
 	
-    if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
+    if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
         $bulan = $_GET['bulan'];
         $tahun = $_GET['tahun'];
         $bulantahun = $bulan.$tahun;
@@ -45,7 +45,7 @@ class DataAbsensi extends CI_Controller{
 	}
 	public function searchResult(){
 		$data['title'] = "Data Absensi Siswa";
-		if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
+		if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
 			$bulan = $_GET['bulan'];
 			$tahun = $_GET['tahun'];
 			$bulantahun = $bulan.$tahun;

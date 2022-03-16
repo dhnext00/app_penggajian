@@ -34,8 +34,8 @@
             <label for="staticEmail2">Tahun: </label>
             <select class="form-control ml-3" name="tahun">
                 <option value="">--Pilih Tahun--</option>
-                <?php $tahun = date('Y');
-                for($i=2020;$i<$tahun+5;$i++) { ?>
+                <?php $tahun2 = date('Y');
+                for($i=2020;$i<$tahun2+5;$i++) { ?>
                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                 <?php } ?>
             </select>
