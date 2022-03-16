@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <!-- left column -->
-	<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px">
 	<title><?php echo $title ?></title>
 	<style type="text/css">
 		body{
@@ -14,7 +12,7 @@
 	</style>
 </head>
 <body>
-
+<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px" class="float-right">
 	<center>
 		<h1>PT. VARTA Microbattery Indonesia</h1>
 		<h2>Slip Absensi Siswa</h2>
