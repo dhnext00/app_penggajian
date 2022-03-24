@@ -56,7 +56,11 @@ class DataAbsensi extends CI_Controller{
 		}
 		$data['bulan'] = $bulan;
 		$data['tahun'] = $tahun;
-		$nama_siswa = $_GET['nama_siswa'];
+		if(isset($_GET['nama_siswa'])){
+			$nama_siswa = $_GET['nama_siswa'];
+		}else{
+			$nama_siswa = "";
+		}
 		$data['absensi'] = $this->db->query("SELECT data_kehadiran.*,data_siswa.nama_siswa, data_siswa.jenis_kelamin, data_siswa.sekolah
 			FROM data_kehadiran
 			INNER JOIN data_siswa ON data_kehadiran.nis=data_siswa.nis
