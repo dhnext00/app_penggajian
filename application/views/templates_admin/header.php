@@ -19,5 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() ?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
