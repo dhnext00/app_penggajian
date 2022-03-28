@@ -20,7 +20,7 @@ class DataAbsensi extends CI_Controller{
 	{
 	$data['title'] = "Data Absensi Siswa";
 	
-    if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
+    if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
         $bulan = $_GET['bulan'];
         $tahun = $_GET['tahun'];
         $bulantahun = $bulan.$tahun;
@@ -29,12 +29,13 @@ class DataAbsensi extends CI_Controller{
         $tahun = date('Y');
         $bulantahun = $bulan.$tahun;
     }
-
+	$data['bulan'] = $bulan;
+	$data['tahun'] = $tahun;
 	$data['absensi'] = $this->db->query("SELECT data_kehadiran.*,data_siswa.nama_siswa, data_siswa.jenis_kelamin, data_siswa.sekolah
 		FROM data_kehadiran
 		INNER JOIN data_siswa ON data_kehadiran.nis=data_siswa.nis
 		INNER JOIN data_sekolah ON data_siswa.sekolah = data_sekolah.nama_sekolah
-		WHERE data_kehadiran.bulan='$bulantahun' 
+		WHERE data_kehadiran.bulan='$bulantahun'
 		ORDER BY data_siswa.nama_siswa ASC")->result();
 	
 	$this->load->view('templates_admin/header',$data);
@@ -42,7 +43,36 @@ class DataAbsensi extends CI_Controller{
     $this->load->view('admin/dataAbsensi',$data);
     $this->load->view('templates_admin/footer');
 	}
+	public function searchResult(){
+		$data['title'] = "Data Absensi Siswa";
+		if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
+			$bulan = $_GET['bulan'];
+			$tahun = $_GET['tahun'];
+			$bulantahun = $bulan.$tahun;
+		}else{
+			$bulan = date('m');
+			$tahun = date('Y');
+			$bulantahun = $bulan.$tahun;
+		}
+		$data['bulan'] = $bulan;
+		$data['tahun'] = $tahun;
+		if(isset($_GET['nama_siswa'])){
+			$nama_siswa = $_GET['nama_siswa'];
+		}else{
+			$nama_siswa = "";
+		}
+		$data['absensi'] = $this->db->query("SELECT data_kehadiran.*,data_siswa.nama_siswa, data_siswa.jenis_kelamin, data_siswa.sekolah
+			FROM data_kehadiran
+			INNER JOIN data_siswa ON data_kehadiran.nis=data_siswa.nis
+			INNER JOIN data_sekolah ON data_siswa.sekolah = data_sekolah.nama_sekolah
+			WHERE data_kehadiran.bulan='$bulantahun' AND data_kehadiran.nama_siswa = '$nama_siswa'
+			ORDER BY data_siswa.nama_siswa ASC")->result();
 
+			$this->load->view('templates_admin/header',$data);
+			$this->load->view('templates_admin/sidebar');
+			$this->load->view('admin/dataAbsensi',$data);
+			$this->load->view('templates_admin/footer');
+	}
 	public function inputAbsensi()
 	{
 		if($this->input->post('submit', TRUE) == 'submit'){

@@ -34,22 +34,12 @@
             <label for="staticEmail2">Tahun: </label>
             <select class="form-control ml-3" name="tahun">
                 <option value="">--Pilih Tahun--</option>
-                <?php $tahun = date('Y');
-                for($i=2020;$i<$tahun+5;$i++) { ?>
+                  <?php $tahun2 = date('Y');
+                for($i=2020;$i<$tahun2+5;$i++) { ?>
                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                 <?php } ?>
             </select>
-          </div>
-          
-        <div class="form-group mb-2 ml-5">
-            <label for="staticEmail2">Siswa: </label>
-            <select class="form-control ml-3" name="tahun">
-                <option value="">--Pilih Siswa--</option>
-                <?php foreach($siswa as $s) : ?>
-                    <option value="<?php echo $s->nama_siswa ?>"><?php echo $s->nama_siswa ?></option>
-                <?php endforeach; ?>
-                </select>
-            </div>        
+          </div>        
 
           <button type="submit" class="btn btn-primary mb-2 ml-auto"><i class="fas fa-eye"></i> Generate </button>
         </form>
@@ -58,7 +48,7 @@
   </div>
 
     <?php 
-        if((isset($_GET['bulan']) && $_GET['bulan']!='') && (isset($_GET['tahun']) && $_GET['tahun']!='')){
+        if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
             $bulan = $_GET['bulan'];
             $tahun = $_GET['tahun'];
             $bulantahun = $bulan.$tahun;
@@ -73,6 +63,8 @@
   <div class="alert alert-info">
       Menampilkan Data Kehadiran Siswa Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun:<span class="font-weight-bold"><?php echo $tahun ?></span>
   </div>
+
+  
 
 <form method="POST">
   <button class="btn btn-success mb-3" type="submit" name="submit" value="submit">Simpan</button>

@@ -34,8 +34,8 @@
             <label for="staticEmail2">Tahun: </label>
             <select class="form-control ml-3" name="tahun">
                 <option value="">--Pilih Tahun--</option>
-                <?php $tahun = date('Y');
-                for($i=2020;$i<$tahun+5;$i++) { ?>
+                 <?php $tahun2 = date('Y');
+                for($i=2020;$i<$tahun2+5;$i++) { ?>
                     <option value="<?php echo $i ?>"><?php echo $i ?></option>
                 <?php } ?>
             </select>
@@ -64,30 +64,27 @@
   <div class="alert alert-info">
       Menampilkan Data Kehadiran Siswa Bulan: <span class="font-weight-bold"><?php echo $bulan ?></span> Tahun:<span class="font-weight-bold"><?php echo $tahun ?></span>
   </div>
-                 <div id="secondary" class="widget-area" role="complementary">
-        <aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="../admin/dataAbsensi">
+              <div id="secondary" class="widget-area" role="complementary">
+        <aside id="search-2" class="widget widget_search">
+          <form role="search" method="get" class="search-form" action="<?php echo base_url('admin/dataAbsensi/searchResult?bulan=$bulan&tahun=$tahun&')?>">
                 <label>
-                    <span class="screen-reader-text">Search untuk:</span>
-                    <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="nama_siswa" />
+                    <input type="text" name="bulan" value="<?= $bulan ?>" hidden>
+                    <input type="text" name="tahun" value="<?= $tahun ?>" hidden>
+                    <span class="screen-reader-text">Nama Siswa: </span>
+                    <input type="search" class="search-field form-control rounded" placeholder="Search &hellip;" value="" name="nama_siswa" />
+                    
+                
                 </label>
                 <input type="submit" class="search-submit" value="Search" />
-            </form></aside>
+          </form>
+        </aside>
 
-            <div class="input-group mb-3">
-            <span class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></span>
-            <input
-                type="search"
-                class="form-control rounded"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="search-addon"
-            />
-            </div>
+   
 
   <?php 
 
   $jml_data = count($absensi);
-  if($jml_data > 0) { ?>
+  if($jml_data > 1) { ?>
 
   <table class="table table-bordered table-striped">
     <tr>
@@ -100,6 +97,7 @@
         <td class="text-center">Sakit</td>
         <td class="text-center">Alpha</td>      
     </tr>
+
   
     <?php $no=1; foreach($absensi as $a) : ?>
         <tr>
@@ -114,9 +112,9 @@
         </tr>
     <?php endforeach; ?>
   </table>
-
     <?php }else{ ?>
-        <span class="badge badge-danger"><i class="fas fa-info-circle"></i> Data masih kosong, silahkan input data kehadiran pada bulan dan tahun yang Anda pilih.</span>
+        
+        <span class="badge badge-danger <?php echo base_url('searchResult?nama_siswa') ?>"><i class="fas fa-info-circle"></i> Data salah, silahkan masukkan data kehadiran berdasarkan nama siswa.</span>
     <?php } ?>
 
                   
