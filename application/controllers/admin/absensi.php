@@ -82,8 +82,6 @@ public function __construct() {
   }
   $output .= '</table>';
   echo $output;
-  echo $bulantahun;
-  echo $query;
  }
 
  function resetDate(){
