@@ -87,7 +87,7 @@
             <input type="hidden" name="nama_siswa[]" class="form-control" value="<?php echo $a->nama_siswa ?>">
             <input type="hidden" name="jenis_kelamin[]" class="form-control" value="<?php echo $a->jenis_kelamin ?>">
             <input type="hidden" name="nama_sekolah[]" class="form-control" value="<?php echo $a->nama_sekolah ?>">
-
+           
             <td><?php echo $no++ ?></td>
             <td><?php echo $a->nis ?></td>
             <td><?php echo $a->nama_siswa ?></td>
