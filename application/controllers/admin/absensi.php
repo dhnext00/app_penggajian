@@ -7,7 +7,7 @@ public function __construct() {
       $this->load->database();
    }
 
- function index()
+ public function index()
  {
     $data['title'] = "Data Absensi Siswa";
     if(isset($_GET['bulan']) && $_GET['bulan']!='' && isset($_GET['tahun']) && $_GET['tahun']!=''){
@@ -21,14 +21,16 @@ public function __construct() {
     }
     $data['bulan'] = $bulan;
     $data['tahun'] = $tahun;
+    $this->session->set_userdata('bulantahun',$bulantahun);
     $this->load->view('templates_admin/header',$data);
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/absensi',$data);
     $this->load->view('templates_admin/footer');
  }
 
- function fetch()
+ function fetch($data=array())
  {
+  $bulantahun = $this->session->userdata('bulantahun');
   $output = '';
   $query = '';
   $this->load->model('AbsensiSearch_model');
@@ -36,13 +38,14 @@ public function __construct() {
   {
    $query = $this->input->post('query');
   }
-  $data = $this->AbsensiSearch_model->fetch_data($query);
+  $data = $this->AbsensiSearch_model->fetch_data($query,$bulantahun);
   $output .= '
   <div class="table-responsive">
      <table class="table table-bordered table-striped">
       <tr>
        <th>No</th>
        <th>NIS</th>
+       <th>Bulan</th>
        <th>Nama Siswa</th>
        <th>Jenis Kelamin</th>
        <th>Nama Sekolah</th>
@@ -60,6 +63,7 @@ public function __construct() {
       <tr>
        <td>'.$no++.'</td>
        <td>'.$row->nis.'</td>
+       <td>'.$row->bulan.'</td>
        <td>'.$row->nama_siswa.'</td>
        <td>'.$row->jenis_kelamin.'</td>
        <td>'.$row->nama_sekolah.'</td>
@@ -78,6 +82,13 @@ public function __construct() {
   }
   $output .= '</table>';
   echo $output;
+  echo $bulantahun;
+  echo $query;
+ }
+
+ function resetDate(){
+    $this->session->unset_userdata('bulantahun');
+    redirect('admin/absensi');
  }
  
 }
