@@ -11,7 +11,9 @@ class AbsensiSearch_model extends CI_Model
   $this->db->where("a.bulan='$bt'");
   if($query != '')
   {
-   $this->db->where('a.nama_siswa', $query);
+   $this->db->like('a.nama_siswa', $query);
+   $this->db->or_like('a.nis', $query);
+   $this->db->or_like('a.nama_sekolah', $query);
   }
   return $this->db->get();
  }
