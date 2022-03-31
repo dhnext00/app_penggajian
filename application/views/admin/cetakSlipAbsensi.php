@@ -12,13 +12,20 @@
 	</style>
 </head>
 <body>
+<<<<<<< HEAD
 <p align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="300px" class="float-right"></p>
+=======
+<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px" class="float-right">
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
 	<center>
 		<h1>PT. VARTA Microbattery Indonesia</h1>
 		<h2>Slip Absensi Siswa</h2>
 		<hr style="width: 50%; border-width: 5px; color: black;">
+<<<<<<< HEAD
 		<br />
 		<br />
+=======
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
 	</center>
 	
 	<?php foreach($print_slip as $l) : ?>

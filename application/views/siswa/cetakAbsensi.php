@@ -4,7 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- left column -->
+<<<<<<< HEAD
 	<p align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="300px"></p>
+=======
+	<img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px">
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
 	<title><?php echo $title ?></title>
 	<style type="text/css">
 		body{
@@ -19,8 +23,11 @@
 		<h1>PT. VARTA Microbattery Indonesia</h1>
 		<h2>Data Absensi Siswa PKL</h2>
 		<hr style="width: 50%; border-width: 5px; color: black;">
+<<<<<<< HEAD
 		<br />
 		<br />
+=======
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
 	</center>
 
 	<?php 

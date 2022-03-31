@@ -39,7 +39,11 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
+<<<<<<< HEAD
                                         <img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="250px">
+=======
+                                        <img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px">
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
                                         <h1 class="h4 text-gray-900 mb-4">APLIKASI DATA SISWA PKL <br><b> PT. VARTA Microbattery Indonesia</b></h1>
                                     </div>
                                     <?php echo $this->session->flashdata('pesan') ?>

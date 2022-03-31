@@ -28,6 +28,7 @@ public function __construct() {
     $this->load->view('templates_admin/footer');
  }
 
+<<<<<<< HEAD
  public function inputAbsensi()
   {
     if($this->input->post('submit', TRUE) == 'submit'){
@@ -80,6 +81,8 @@ public function __construct() {
       $this->load->view('templates_admin/footer');
   }
 
+=======
+>>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
  function fetch($data=array())
  {
   $bulantahun = $this->session->userdata('bulantahun');
