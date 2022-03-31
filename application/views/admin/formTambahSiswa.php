@@ -41,13 +41,10 @@
 
                 <div class="form-group">
                     <label>Jurusan</label>
-<<<<<<< HEAD
                     <input type="text" name="jurusan" class="form-control">
                     <?php echo form_error('jurusan','<div class="text-small text-danger"></div>') ?>
-=======
                     <input type="text" name="kelas" class="form-control">
                     <?php echo form_error('kelas','<div class="text-small text-danger"></div>') ?>
->>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
                 </div>
 
                 <div class="form-group">

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container-fluid" style="margin-bottom: 100px">
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -6,12 +5,6 @@
     </div>
 
       <div class="card mb-3">
-=======
-<div class="container">
-   <br/>
-   <h2 align="center">Pencarian</h2><br />
-   <div class="card mb-3">
->>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
       <div class="card-header bg-primary text-white">
         Filter Data Absensi Siswa
       </div>
@@ -49,11 +42,7 @@
           </div>
           <button class="btn btn-primary mb-2 ml-auto">Reset<a href="<?php echo base_url('admin/resetDate') ?>"></a></button>
           <button type="submit" class="btn btn-primary mb-2 ml-3"><i class="fas fa-eye"></i> Tampilkan Data </button>
-<<<<<<< HEAD
           <a href="<?php echo base_url('admin/absensi/inputAbsensi') ?>" class="btn btn-success mb-2 ml-3"><i class="fas fa-plus"></i> Input Kehadiran </a>
-=======
-          <a href="<?php echo base_url('admin/dataAbsensi/inputAbsensi') ?>" class="btn btn-success mb-2 ml-3"><i class="fas fa-plus"></i> Input Kehadiran </a>
->>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
         </form>
 
       </div>
@@ -64,18 +53,12 @@
   </div>
    <div class="form-group">
     <div class="input-group">
-<<<<<<< HEAD
       <div id="secondary" class="widget-area" role="complementary">
           <span class="screen-reader-text">Search Nama Siswa:</span>
      <input type="text" name="search_text" id="search_text" placeholder="Search" class="form-control" />
     </div>
    </div>
  </div>
-=======
-     <input type="text" name="search_text" id="search_text" placeholder="Pencarian" class="form-control" />
-    </div>
-   </div>
->>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
    <br />
    <div id="result"></div>
   </div>

@@ -39,11 +39,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-<<<<<<< HEAD
                 <a class="nav-link collapsed" href="<?php echo base_url('admin/absensi') ?>">
-=======
-                <a class="nav-link collapsed" href="<?php echo base_url('admin/dataAbsensi') ?>">
->>>>>>> e75c021408cdce3ef023e621f9440039eb6f7b3e
                     <i class="fas fa-fw fa-money-check-alt"></i>
                     <span>Absensi</span>
                 </a>
