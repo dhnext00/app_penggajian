@@ -57,6 +57,7 @@
 			<th class="text-center">Sekolah</th>
 			<th class="text-center">Hadir</th>
 			<th class="text-center">Sakit</th>
+			<th class="text-center">Izin</th>
 			<th class="text-center">Alpha</th>
 		</tr>
 
@@ -68,6 +69,7 @@
 			<td><?php echo $l->nama_sekolah ?></td>
 			<td><?php echo $l->hadir ?></td>
 			<td><?php echo $l->sakit ?></td>
+			<td><?php echo $l->izin ?></td>
 			<td><?php echo $l->alpha ?></td>
 		</tr>
 

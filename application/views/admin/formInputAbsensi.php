@@ -75,6 +75,7 @@
         <td class="text-center">Sekolah</td>
         <td class="text-center" width="8%">Hadir</td>
         <td class="text-center" width="8%">Sakit</td>
+        <td class="text-center" width="8%">Izin</td>
         <td class="text-center" width="8%">Alpha</td>      
     </tr>
   
@@ -93,6 +94,7 @@
             <td><?php echo $a->nama_sekolah ?></td>
             <td><input type="number" name="hadir[]" class="form-control" value="0"></td>
             <td><input type="number" name="sakit[]" class="form-control" value="0"></td>
+            <td><input type="number" name="izin[]" class="form-control" value="0"></td>
             <td><input type="number" name="alpha[]" class="form-control" value="0"></td>
         </tr>
     <?php endforeach; ?>

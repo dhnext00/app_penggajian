@@ -12,7 +12,7 @@
 	</style>
 </head>
 <body>
-<p align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="300px" class="float-right"></p>
+<p align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="300px"></p>
 	<center>
 		<h1>PT. VARTA Microbattery Indonesia</h1>
 		<h2>Slip Absensi Siswa</h2>
@@ -72,6 +72,12 @@
 			<td>2</td>
 			<td>Sakit</td>
 			<td><?php echo number_format($l->sakit,0,',','.') ?></td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>Izin</td>
+			<td><?php echo number_format($l->izin,0,',','.') ?></td>
 		</tr>
 
 		<tr>

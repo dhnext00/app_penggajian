@@ -39,14 +39,15 @@ public function __construct() {
         {
           $simpan[] = array(
 
-            'bulan'       => $post['bulan'][$key],
-            'nis'       => $post['nis'][$key],
-            'nama_siswa'    => $post['nama_siswa'][$key],
+            'bulan'           => $post['bulan'][$key],
+            'nis'             => $post['nis'][$key],
+            'nama_siswa'      => $post['nama_siswa'][$key],
             'jenis_kelamin'   => $post['jenis_kelamin'][$key],
             'nama_sekolah'    => $post['nama_sekolah'][$key],
-            'hadir'       => $post['hadir'][$key],
-            'sakit'       => $post['sakit'][$key],
-            'alpha'       => $post['alpha'][$key],
+            'hadir'           => $post['hadir'][$key],
+            'sakit'           => $post['sakit'][$key],
+            'izin'            => $post['izin'][$key],
+            'alpha'           => $post['alpha'][$key],
           );
         }
       }
@@ -103,6 +104,7 @@ public function __construct() {
        <th>Nama Sekolah</th>
        <th>hadir</th>
        <th>sakit</th>
+       <th>izin</th>
        <th>alpha</th>
       </tr>
   ';
@@ -121,6 +123,7 @@ public function __construct() {
        <td>'.$row->nama_sekolah.'</td>
        <td>'.$row->hadir.'</td>
        <td>'.$row->sakit.'</td>
+       <td>'.$row->izin.'</td>
        <td>'.$row->alpha.'</td>
       </tr>
     ';

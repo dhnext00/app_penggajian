@@ -46,7 +46,7 @@
 		</tr>
 
 		<tr>
-			<td>NIK</td>
+			<td>NIS</td>
 			<td>:</td>
 			<td><?php echo $l->nis ?></td>
 		</tr>
@@ -87,6 +87,12 @@
 			<td>2</td>
 			<td>Sakit</td>
 			<td><?php echo number_format($l->sakit,0,',','.') ?></td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>Izin</td>
+			<td><?php echo number_format($l->izin,0,',','.') ?></td>
 		</tr>
 
 		<tr>

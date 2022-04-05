@@ -43,8 +43,6 @@
                     <label>Jurusan</label>
                     <input type="text" name="jurusan" class="form-control">
                     <?php echo form_error('jurusan','<div class="text-small text-danger"></div>') ?>
-                    <input type="text" name="kelas" class="form-control">
-                    <?php echo form_error('kelas','<div class="text-small text-danger"></div>') ?>
                 </div>
 
                 <div class="form-group">

@@ -36,7 +36,7 @@ class SlipAbsensi extends CI_Controller{
 		$tahun = $this->input->post('tahun');
 		$bulantahun=$bulan.$tahun;
 		
-		$data['print_slip'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.sakit,data_kehadiran.alpha,data_kehadiran.bulan
+		$data['print_slip'] = $this->db->query("SELECT data_siswa.nis,data_siswa.nama_siswa,data_sekolah.nama_sekolah,data_sekolah.alamat_sekolah,data_sekolah.tahun_ajaran,data_kehadiran.hadir,data_kehadiran.sakit,data_kehadiran.izin,data_kehadiran.alpha,data_kehadiran.bulan
 			FROM data_siswa
 			INNER JOIN data_kehadiran ON data_kehadiran.nis=data_siswa.nis
 			INNER JOIN data_sekolah ON data_sekolah.nama_sekolah=data_siswa.sekolah
