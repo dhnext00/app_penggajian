@@ -93,28 +93,32 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+ 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
                    <h4 class="font-weight-bold">PT. VARTA Microbattery Indonesia</h4>
-
+                   
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
+                    <h4 align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px"></h4>
                         <div class="topbar-divider d-none d-sm-block"></div>
-
                         <!-- Nav Item - User Information -->
+                    
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang <?php echo $this->session->userdata('nama_siswa')  ?></span>
+                                
                                 <img class="img-profile rounded-circle"
                                     src="<?php echo base_url('assets/photo/').$this->session->userdata('photo')?>">
+                               </p>
                             </a>
                            </li>
+                    
                        </ul>
                    </nav>
                
