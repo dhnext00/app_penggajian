@@ -68,13 +68,11 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <h4 align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px"></h4>
 
+                    <div class="topbar-divider d-none d-sm-block">
                        
-
-                       
-
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                    </div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -87,4 +85,4 @@
                            </li>
                        </ul>
                    </nav>
-               
+                
