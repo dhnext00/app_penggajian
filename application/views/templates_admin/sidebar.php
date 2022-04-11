@@ -103,7 +103,7 @@
                    
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                    <h4 align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px"></h4>
+                    <div align="right"><img src="<?php echo base_url().'assets/photo/varta01.png'?>" width="150px"></div>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                     

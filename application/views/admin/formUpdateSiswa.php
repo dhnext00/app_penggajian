@@ -8,7 +8,7 @@
         <div class="card-body">
         
         <?php foreach ($siswa as $s) : ?>
-            <form method="POST" action="<?php echo base_url('admin/dataSiswa/updateDataAksi') ?>" enctype="multipart/form-data">
+            <form method="POST" action="<?php echo base_url('admin/dataSiswa/updateDataAksi/') ?>" enctype="multipart/form-data">
                 
                 <div class="form-group">
                     <label>NIS</label>
@@ -62,7 +62,7 @@
                     <select name="sekolah" class="form-control">
                         <option value="<?php echo $s->sekolah ?>"><?php echo $s->sekolah ?></option>
                         <?php foreach($sekolah as $k) : ?>
-                        <option value="<?php echo $k->nama_sekolah ?>"><?php echo $s->nama_sekolah ?></option>
+                        <option value="<?php echo $k->nama_sekolah ?>"><?php echo $k->nama_sekolah ?></option>
                     <?php endforeach; ?>
                     </select>
                     <?php echo form_error('sekolah','<div class="text-small text-danger"></div>') ?>
