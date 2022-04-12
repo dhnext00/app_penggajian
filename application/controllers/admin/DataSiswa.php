@@ -19,7 +19,7 @@ class dataSiswa extends CI_Controller{
 	public function index()
 	{
 	$data['title'] = "Data Siswa";
-	$data['siswa'] = $this->penggajianModel->get_data('data_siswa')->result();
+	$data['siswa'] = $this->penggajianModel->get_data_siswa('data_siswa')->result();
 	$this->load->view('templates_admin/header',$data);
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/dataSiswa',$data);
