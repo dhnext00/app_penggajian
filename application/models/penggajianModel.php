@@ -3,6 +3,7 @@
 class PenggajianModel extends CI_model{
 
 	public function get_data($table){
+		$this->db->order_by("nama_siswa", "asc");
 		return $this->db->get($table);
 	}
 
