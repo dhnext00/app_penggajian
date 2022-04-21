@@ -6,6 +6,16 @@ class PenggajianModel extends CI_model{
 		return $this->db->get($table);
 	}
 
+	public function get_data_siswa($table){
+		$this->db->order_by("nama_siswa", "asc");
+		return $this->db->get($table);
+	}
+
+	public function get_data_sekolah($table){
+		$this->db->order_by("nama_sekolah", "asc");
+		return $this->db->get($table);
+	}
+
 	public function insert_data($data,$table){
 		$this->db->insert($table,$data);
 	}

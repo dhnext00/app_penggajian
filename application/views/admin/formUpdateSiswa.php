@@ -8,7 +8,7 @@
         <div class="card-body">
         
         <?php foreach ($siswa as $s) : ?>
-            <form method="POST" action="<?php echo base_url('admin/dataSiswa/updateDataAksi') ?>" enctype="multipart/form-data">
+            <form method="POST" action="<?php echo base_url('admin/dataSiswa/updateDataAksi/') ?>" enctype="multipart/form-data">
                 
                 <div class="form-group">
                     <label>NIS</label>
@@ -40,7 +40,7 @@
                     <select name="jenis_kelamin" class="form-control">
                         <option value="<?php echo $s->jenis_kelamin ?>"><?php echo $s->jenis_kelamin ?></option>
                         <option value="Laki-Laki">Laki-Laki</option>
-                        <option value="perempuan">Perempuan</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
                     <?php echo form_error('jenis_kelamin','<div class="text-small text-danger"></div>') ?>
                 </div>
@@ -62,7 +62,7 @@
                     <select name="sekolah" class="form-control">
                         <option value="<?php echo $s->sekolah ?>"><?php echo $s->sekolah ?></option>
                         <?php foreach($sekolah as $k) : ?>
-                        <option value="<?php echo $k->nama_sekolah ?>"><?php echo $s->nama_sekolah ?></option>
+                        <option value="<?php echo $k->nama_sekolah ?>"><?php echo $k->nama_sekolah ?></option>
                     <?php endforeach; ?>
                     </select>
                     <?php echo form_error('sekolah','<div class="text-small text-danger"></div>') ?>
@@ -78,7 +78,8 @@
 
                 <div class="form-group">
                     <label>Photo</label>
-                    <input type="file" name="photo" class="form-control">
+                    <input type="file" name="photo" class="form-control" value="<?php echo $s->photo ?>">
+                    <?php echo form_error('photo','<div class="text-small text-danger"></div>') ?>    
                 </div>
 
                  <div class="form-group">

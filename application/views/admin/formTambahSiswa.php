@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 100px">
 
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><?php echo $title ?></h1>
@@ -50,7 +50,7 @@
                     <select name="jenis_kelamin" class="form-control">
                         <option>--Pilih Jenis Kelamin--</option>
                         <option value="Laki-Laki">Laki-Laki</option>
-                        <option value="perempuan">Perempuan</option>
+                        <option value="Perempuan">Perempuan</option>
                     </select>
                     <?php echo form_error('jenis_kelamin','<div class="text-small text-danger"></div>') ?>
                 </div>
@@ -75,6 +75,7 @@
                 <div class="form-group">
                     <label>Photo</label>
                     <input type="file" name="photo" class="form-control">
+                    <?php echo form_error('photo','<div class="text-small text-danger"></div>') ?>
                 </div>
 
                 <div class="form-group">

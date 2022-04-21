@@ -96,16 +96,16 @@ public function __construct() {
   <div class="table-responsive">
      <table class="table table-bordered table-striped">
       <tr>
-       <th>No</th>
-       <th>NIS</th>
-       <th>Bulan</th>
-       <th>Nama Siswa</th>
-       <th>Jenis Kelamin</th>
-       <th>Nama Sekolah</th>
-       <th>hadir</th>
-       <th>sakit</th>
-       <th>izin</th>
-       <th>alpha</th>
+       <th class="text-center">No</th>
+       <th class="text-center">NIS</th>
+       <th class="text-center">Bulan</th>
+       <th class="text-center">Nama Siswa</th>
+       <th class="text-center">Jenis Kelamin</th>
+       <th class="text-center">Nama Sekolah</th>
+       <th class="text-center">Hadir</th>
+       <th class="text-center">Sakit</th>
+       <th class="text-center">Izin</th>
+       <th class="text-center">Alpha</th>
       </tr>
   ';
   if($data->num_rows() > 0)

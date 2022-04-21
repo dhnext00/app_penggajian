@@ -19,7 +19,7 @@ class DataSekolah extends CI_Controller{
 	public function index()
 	{
 	$data['title'] = "Data Sekolah";
-	$data['sekolah'] = $this->penggajianModel->get_data('data_sekolah')->result();
+	$data['sekolah'] = $this->penggajianModel->get_data_sekolah('data_sekolah')->result();
 	$this->load->view('templates_admin/header',$data);
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/dataSekolah',$data);

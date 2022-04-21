@@ -19,7 +19,7 @@ class dataSiswa extends CI_Controller{
 	public function index()
 	{
 	$data['title'] = "Data Siswa";
-	$data['siswa'] = $this->penggajianModel->get_data('data_siswa')->result();
+	$data['siswa'] = $this->penggajianModel->get_data_siswa('data_siswa')->result();
 	$this->load->view('templates_admin/header',$data);
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/dataSiswa',$data);
@@ -110,7 +110,6 @@ class dataSiswa extends CI_Controller{
 		if($this->form_validation->run() == FALSE){
 			$this->updateData();
 		}else{
-			$id						=$this->input->post('id_siswa');
 			$nis 					=$this->input->post('nis');
 			$nama_siswa 			=$this->input->post('nama_siswa');
 			$jenis_kelamin 			=$this->input->post('jenis_kelamin');
@@ -123,12 +122,11 @@ class dataSiswa extends CI_Controller{
 			$password 				=md5($this->input->post('password'));
 			$photo 					=$_FILES['photo']['name'];
 			if($photo){
-				$config ['update_path'] = './assets/photo';
+				$config ['upload_path'] = './assets/photo';
 				$config ['allowed_types'] = 'jpg|jpeg|png|tiff';
 				$this->load->library('upload',$config);
 				if($this->upload->do_upload('photo')){
 					$photo=$this->upload->data('file_name');
-					$this->db->set('photo',$photo);
 				}else{
 					echo $this->upload->display_errors();
 				}
@@ -145,12 +143,12 @@ class dataSiswa extends CI_Controller{
 				'hak_akses'			=> $hak_akses,
 				'username'			=> $username,
 				'password'			=> $password,
+				'photo'				=> $photo,
 			);
 
 			$where = array(
-				'id_siswa' => $id
+				'id_siswa' => $this->input->post('id_siswa')
 			);
-
 			$this->penggajianModel->update_data('data_siswa',$data,$where);
 			$this->session->set_flashdata('pesan','<div class="alert alert-success dismissible fade show" role="alert">
   			<strong>Data berhasil diupdate!</strong>
