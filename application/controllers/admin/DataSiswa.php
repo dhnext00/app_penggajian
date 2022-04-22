@@ -147,7 +147,11 @@ class dataSiswa extends CI_Controller{
 			);
 
 			$where = array(
+<<<<<<< HEAD
 				'id_siswa' => $this->input->post('id_siswa')
+=======
+				'id_siswa' 					=> $this->input->post('id_siswa')
+>>>>>>> 0f31d6380ef60ae6a3f236a209710d3aac414161
 			);
 			$this->penggajianModel->update_data('data_siswa',$data,$where);
 			$this->session->set_flashdata('pesan','<div class="alert alert-success dismissible fade show" role="alert">
