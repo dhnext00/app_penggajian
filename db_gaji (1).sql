@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2022 at 02:24 AM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Apr 11, 2022 at 05:03 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,6 +60,7 @@ CREATE TABLE `data_kehadiran` (
   `nama_sekolah` varchar(50) NOT NULL,
   `hadir` int(11) NOT NULL,
   `sakit` int(11) NOT NULL,
+  `izin` int(11) NOT NULL,
   `alpha` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -67,27 +68,43 @@ CREATE TABLE `data_kehadiran` (
 -- Dumping data for table `data_kehadiran`
 --
 
-INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nis`, `nama_siswa`, `jenis_kelamin`, `nama_sekolah`, `hadir`, `sakit`, `alpha`) VALUES
-(21, '022022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 1, 0),
-(22, '022022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 2, 0),
-(23, '022022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 3, 0),
-(24, '012022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 0, 0),
-(25, '012022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 0),
-(26, '012022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 0),
-(33, '042022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 1, 0),
-(34, '042022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0),
-(35, '042022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 1),
-(37, '022022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 1, 0),
-(38, '012022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(39, '012022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 1, 0),
-(40, '022022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 1),
-(41, '042022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(42, '042022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 0),
-(43, '032022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(44, '032022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 1, 2),
-(45, '032022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 0, 1),
-(46, '032022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0),
-(47, '032022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0);
+INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nis`, `nama_siswa`, `jenis_kelamin`, `nama_sekolah`, `hadir`, `sakit`, `izin`, `alpha`) VALUES
+(53, '012022', '0045918199', 'Ezra Natalia Simatupang', 'perempuan', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(55, '022022', '0045918199', 'Ezra Natalia Simatupang', 'perempuan', 'SMK NEGERI 1 BATAM', 13, 0, 0, 0),
+(57, '032022', '0045918199', 'Ezra Natalia Simatupang', 'perempuan', 'SMK NEGERI 1 BATAM', 20, 0, 0, 0),
+(64, '012022', '123456789', 'Doni', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 0, 0),
+(65, '012022', '0046305744', 'Hasbi Izzat', 'Laki-Laki', 'SMK NEGERI 3 BATAM', 12, 0, 0, 0),
+(66, '012022', '18120052', 'Muhammad Raihan', 'Laki-Laki', 'SMK NEGERI 7 BATAM', 21, 0, 0, 0),
+(67, '012022', '0047054353', 'Muhammad Rizki Alpandi', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 15, 5, 0, 0),
+(68, '012022', '0045572504', 'Rahmad Afif Cakrawardana', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 19, 0, 0, 0),
+(69, '012022', '209715', 'Vinka Indira Alivianingrum', 'perempuan', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(71, '022022', '123456789', 'Doni', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 0, 0),
+(72, '022022', '0046305744', 'Hasbi Izzat', 'Laki-Laki', 'SMK NEGERI 3 BATAM', 13, 0, 0, 0),
+(73, '022022', '18120052', 'Muhammad Raihan', 'Laki-Laki', 'SMK NEGERI 7 BATAM', 13, 0, 0, 0),
+(74, '022022', '0047054353', 'Muhammad Rizki Alpandi', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 13, 0, 0, 0),
+(75, '022022', '0045572504', 'Rahmad Afif Cakrawardana', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 13, 0, 0, 0),
+(76, '022022', '209715', 'Vinka Indira Alivianingrum', 'perempuan', 'SMK NEGERI 1 BATAM', 13, 0, 0, 0),
+(78, '032022', '123456789', 'Doni', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 0, 0),
+(79, '032022', '0046305744', 'Hasbi Izzat', 'Laki-Laki', 'SMK NEGERI 3 BATAM', 21, 0, 0, 0),
+(80, '032022', '18120052', 'Muhammad Raihan', 'Laki-Laki', 'SMK NEGERI 7 BATAM', 20, 0, 0, 0),
+(81, '032022', '0047054353', 'Muhammad Rizki Alpandi', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 20, 0, 0, 0),
+(82, '032022', '0045572504', 'Rahmad Afif Cakrawardana', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 20, 0, 0, 0),
+(83, '032022', '209715', 'Vinka Indira Alivianingrum', 'perempuan', 'SMK NEGERI 1 BATAM', 20, 0, 0, 0),
+(84, '012022', '209760', 'Arbayu Biseka', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(85, '022022', '209760', 'Arbayu Biseka', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 13, 0, 0, 0),
+(86, '032022', '209760', 'Arbayu Biseka', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 20, 0, 0, 0),
+(87, '012022', '121232323212', 'Admin', 'perempuan', 'Admin', 21, 0, 0, 0),
+(88, '022022', '121232323212', 'Admin', 'perempuan', 'Admin', 21, 0, 0, 0),
+(89, '032022', '121232323212', 'Admin', 'perempuan', 'Admin', 21, 0, 0, 0),
+(90, '042022', '121232323212', 'Admin', 'perempuan', 'Admin', 21, 0, 0, 0),
+(91, '042022', '209760', 'Arbayu Biseka', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(92, '042022', '123456789', 'Doni', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 21, 0, 0, 0),
+(93, '042022', '0045918199', 'Ezra Natalia Simatupang', 'perempuan', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(94, '042022', '0046305744', 'Hasbi Izzat', 'Laki-Laki', 'SMK NEGERI 3 BATAM', 11, 0, 0, 0),
+(95, '042022', '18120052', 'Muhammad Raihan', 'Laki-Laki', 'SMK NEGERI 7 BATAM', 21, 0, 0, 0),
+(96, '042022', '0047054353', 'Muhammad Rizki Alpandi', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(97, '042022', '0045572504', 'Rahmad Afif Cakrawardana', 'Laki-Laki', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0),
+(98, '042022', '209715', 'Vinka Indira Alivianingrum', 'perempuan', 'SMK NEGERI 1 BATAM', 21, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -140,11 +157,12 @@ CREATE TABLE `data_sekolah` (
 --
 
 INSERT INTO `data_sekolah` (`id_sekolah`, `nama_sekolah`, `alamat_sekolah`, `tahun_ajaran`) VALUES
-(2, 'SMK Negri 10 Batam', 'jln.tengku blok F batam kota', '2021/2022'),
-(3, 'SMK Kartini Batam', 'jln. Tengku Umar', '2021/2022'),
-(4, 'SMK Negeri 30 Batam', 'Jln.Imam Syafi\'i', '2021/2022'),
-(5, 'SEKOLAH MENENGAH KEJURUAN', 'jln.engku putri', '2021/2022'),
-(7, 'admin', 'Jln.Imamunm', '2021/2022');
+(7, 'Admin', 'Admin', 'Admin'),
+(8, 'SMK REAL INFORMATIKA', 'Komplek Prima Sejati Blok A No. 5 - 9,  Baloi Permai, Batam Kota, Kota Batam', '2021/2022'),
+(9, 'SMK NEGERI 1 BATAM', 'Jln. Prof. Dr. Hamka No.1 Batu Aji Batam', '2021/2022'),
+(10, 'SEKOLAH MENENGAH KEJURUAN', 'Jln. Angkasa Pertiwi', '2021/2022'),
+(11, 'SMK NEGERI 7 BATAM', 'Komp. Koperasi Pemko, Batam Center. Belian', '2021/2022'),
+(12, 'SMK NEGERI 3 BATAM', 'Jln. Letjed S. Parman, Kel. Duriangkang, Kec. Sei Beduk, Kota Batam', '2021/2022');
 
 -- --------------------------------------------------------
 
@@ -173,11 +191,15 @@ CREATE TABLE `data_siswa` (
 --
 
 INSERT INTO `data_siswa` (`id_siswa`, `id_user`, `nis`, `nama_siswa`, `username`, `password`, `kelas`, `jurusan`, `jenis_kelamin`, `sekolah`, `tanggal_masuk`, `photo`, `hak_akses`) VALUES
-(3, 0, '23542736434', 'Siti', 'siti', 'db04eb4b07e0aaf8d1d477ae342bdff9', 'IX', 'Akuntasi', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar011.png', 2),
-(4, 0, '123456789', 'Rita', 'test', '098f6bcd4621d373cade4e832627b4f6', 'IX', 'TKJ', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar02.png', 1),
-(5, 0, '12425143736', 'Doni', 'doni', '2da9cd653f63c010b6d6c5a5ad73fe32', 'IX', 'Multimedia', 'Laki-Laki', 'SMK Negri 10 Batam', '2022-02-02', 'avatar1.jpg', 2),
-(7, 0, '1096135364747', 'Dino', 'dino', 'b246ff693d453c3b1a3049752da2bc75', 'IX', 'RPL', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', '2022-02-20', 'avatar2.jpg', 2),
-(8, 0, '1121122224313', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'IX', 'Admin', 'perempuan', 'admin', '2010-10-10', 'avatar012.png', 1);
+(17, 0, '123456789', 'Doni', 'doni', '2da9cd653f63c010b6d6c5a5ad73fe32', 'XI', 'Multimedia', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', '2022-04-05', 'avatar1.jpg', 2),
+(21, 0, '121232323212', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 'Admin', 'perempuan', 'Admin', '2010-10-10', 'avatar0111.png', 1),
+(22, 0, '0045918199', 'Ezra Natalia Simatupang', 'ezra', '8beb6443d15f540099bb756f62b629a3', 'XI', 'TKJ', 'perempuan', 'SMK NEGERI 1 BATAM', '2022-01-03', 'WhatsApp_Image_2022-04-05_at_08_08_3511.jpeg', 2),
+(24, 0, '209715', 'Vinka Indira Alivianingrum', 'vinka', '7fba6f27e65481b56f562c626693b020', 'XI', 'Teknik Elektronika Industri', 'perempuan', 'SMK NEGERI 1 BATAM', '2022-01-03', 'WhatsApp_Image_2022-04-04_at_13_24_251.jpeg', 2),
+(25, 0, '0047054353', 'Muhammad Rizki Alpandi', 'rizki', '3e089c076bf1ec3a8332280ee35c28d4', 'XI', 'Teknik Pemesinan', 'Laki-Laki', 'SMK NEGERI 1 BATAM', '2022-01-03', 'WhatsApp_Image_2022-04-04_at_15_33_021.jpeg', 2),
+(26, 0, '18120052', 'Muhammad Raihan', 'raihan', 'daa6b8d04ce72d953d5501adc53ddd82', 'XI', 'TITL', 'Laki-Laki', 'SMK NEGERI 7 BATAM', '2022-01-03', 'WhatsApp_Image_2022-04-05_at_11_38_551.jpeg', 2),
+(27, 0, '0046305744', 'Hasbi Izzat', 'hasbi', '70f8186201b1660ebf05ccb04e1ddb95', 'IX', 'TKJ', 'Laki-Laki', 'SMK NEGERI 3 BATAM', '2022-01-17', 'WhatsApp_Image_2022-04-05_at_11_14_131.jpeg', 2),
+(28, 0, '0045572504', 'Rahmad Afif Cakrawardana', 'afif', 'b56776aa98086825550ff0c3fe260907', 'XI', 'TKJ Telkom', 'Laki-Laki', 'SMK NEGERI 1 BATAM', '2022-01-05', 'WhatsApp_Image_2022-04-05_at_15_22_241.jpeg', 2),
+(29, 0, '209760', 'Arbayu Biseka', 'arbayu', '2d2ff48668b13a9b8f02793c61de8d0b', 'XI', 'Teknik Elektronika Industri', 'Laki-Laki', 'SMK NEGERI 1 BATAM', '2022-01-03', 'bayu.jpeg', 2);
 
 -- --------------------------------------------------------
 
@@ -299,7 +321,7 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`
@@ -311,13 +333,13 @@ ALTER TABLE `data_pegawai`
 -- AUTO_INCREMENT for table `data_sekolah`
 --
 ALTER TABLE `data_sekolah`
-  MODIFY `id_sekolah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_sekolah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `data_siswa`
 --
 ALTER TABLE `data_siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `hak_akses`

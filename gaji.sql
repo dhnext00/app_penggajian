@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2022 at 02:24 AM
+-- Generation Time: Feb 19, 2022 at 07:01 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_gaji`
+-- Database: `gaji`
 --
 
 -- --------------------------------------------------------
@@ -74,20 +74,11 @@ INSERT INTO `data_kehadiran` (`id_kehadiran`, `bulan`, `nis`, `nama_siswa`, `jen
 (24, '012022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 0, 0),
 (25, '012022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 0),
 (26, '012022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 0),
-(33, '042022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 1, 0),
-(34, '042022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0),
-(35, '042022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 0, 1),
-(37, '022022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 1, 0),
-(38, '012022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(39, '012022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 1, 0),
-(40, '022022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 1),
-(41, '042022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(42, '042022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 0),
-(43, '032022', '1121122224313', 'Admin', 'perempuan', 'admin', 20, 0, 0),
-(44, '032022', '1096135364747', 'Dino', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 1, 2),
-(45, '032022', '12425143736', 'Doni', 'Laki-Laki', 'SMK Negri 10 Batam', 20, 0, 1),
-(46, '032022', '123456789', 'Rita', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0),
-(47, '032022', '23542736434', 'Siti', 'perempuan', 'SMK Negri 10 Batam', 20, 1, 0);
+(27, '022022', '1096135364747', 'ask', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 18, 10, 1),
+(28, '022022', '123413514624', 'Rona', 'perempuan', 'SEKOLAH MENENGAH KEJURUAN', 27, 3, 4),
+(29, '012022', '1096135364747', 'ask', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', 20, 0, 2),
+(30, '012022', '123413514624', 'Rona', 'perempuan', 'SEKOLAH MENENGAH KEJURUAN', 20, 2, 1),
+(31, '012022', '1121122224313', 'test', 'perempuan', 'admin', 20, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -142,7 +133,7 @@ CREATE TABLE `data_sekolah` (
 INSERT INTO `data_sekolah` (`id_sekolah`, `nama_sekolah`, `alamat_sekolah`, `tahun_ajaran`) VALUES
 (2, 'SMK Negri 10 Batam', 'jln.tengku blok F batam kota', '2021/2022'),
 (3, 'SMK Kartini Batam', 'jln. Tengku Umar', '2021/2022'),
-(4, 'SMK Negeri 30 Batam', 'Jln.Imam Syafi\'i', '2021/2022'),
+(4, 'SMK Yosudarso', 'Jln.Imam Syafi\'i', '2021/2022'),
 (5, 'SEKOLAH MENENGAH KEJURUAN', 'jln.engku putri', '2021/2022'),
 (7, 'admin', 'Jln.Imamunm', '2021/2022');
 
@@ -160,7 +151,6 @@ CREATE TABLE `data_siswa` (
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `kelas` varchar(20) NOT NULL,
-  `jurusan` varchar(50) NOT NULL,
   `jenis_kelamin` varchar(20) NOT NULL,
   `sekolah` varchar(50) NOT NULL,
   `tanggal_masuk` date NOT NULL,
@@ -172,12 +162,12 @@ CREATE TABLE `data_siswa` (
 -- Dumping data for table `data_siswa`
 --
 
-INSERT INTO `data_siswa` (`id_siswa`, `id_user`, `nis`, `nama_siswa`, `username`, `password`, `kelas`, `jurusan`, `jenis_kelamin`, `sekolah`, `tanggal_masuk`, `photo`, `hak_akses`) VALUES
-(3, 0, '23542736434', 'Siti', 'siti', 'db04eb4b07e0aaf8d1d477ae342bdff9', 'IX', 'Akuntasi', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar011.png', 2),
-(4, 0, '123456789', 'Rita', 'test', '098f6bcd4621d373cade4e832627b4f6', 'IX', 'TKJ', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar02.png', 1),
-(5, 0, '12425143736', 'Doni', 'doni', '2da9cd653f63c010b6d6c5a5ad73fe32', 'IX', 'Multimedia', 'Laki-Laki', 'SMK Negri 10 Batam', '2022-02-02', 'avatar1.jpg', 2),
-(7, 0, '1096135364747', 'Dino', 'dino', 'b246ff693d453c3b1a3049752da2bc75', 'IX', 'RPL', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', '2022-02-20', 'avatar2.jpg', 2),
-(8, 0, '1121122224313', 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'IX', 'Admin', 'perempuan', 'admin', '2010-10-10', 'avatar012.png', 1);
+INSERT INTO `data_siswa` (`id_siswa`, `id_user`, `nis`, `nama_siswa`, `username`, `password`, `kelas`, `jenis_kelamin`, `sekolah`, `tanggal_masuk`, `photo`, `hak_akses`) VALUES
+(3, 0, '23542736434', 'Siti', 'siti', 'db04eb4b07e0aaf8d1d477ae342bdff9', 'IX', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar011.png', 2),
+(4, 0, '123456789', 'Rita', 'test', '098f6bcd4621d373cade4e832627b4f6', 'IX', 'perempuan', 'SMK Negri 10 Batam', '2022-02-02', 'avatar02.png', 1),
+(5, 0, '12425143736', 'Doni', 'doni', '2da9cd653f63c010b6d6c5a5ad73fe32', 'IX', 'Laki-Laki', 'SMK Negri 10 Batam', '2022-02-02', 'avatar1.jpg', 2),
+(7, 0, '1096135364747', 'ask', 'ask', '5ed33f7008771c9d49e3716aeaeca581', 'IX', 'Laki-Laki', 'SEKOLAH MENENGAH KEJURUAN', '2022-02-20', 'avatar2.jpg', 2),
+(8, 0, '1121122224313', 'test', 'test', 'd606ccaf6cfd9e694b53f5f5fe6e7e61', 'IX', 'perempuan', 'admin', '2010-10-10', 'avatar012.png', 1);
 
 -- --------------------------------------------------------
 
@@ -299,7 +289,7 @@ ALTER TABLE `data_jabatan`
 -- AUTO_INCREMENT for table `data_kehadiran`
 --
 ALTER TABLE `data_kehadiran`
-  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id_kehadiran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `data_pegawai`
